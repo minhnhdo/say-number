@@ -1,3 +1,19 @@
+//! `say-number` says the number in English.
+//!
+//! # Using this library
+//!
+//! Add the following to your [`Cargo.toml`](https://crates.io/):
+//!
+//! ```toml
+//! [dependencies]
+//! say-number = "0.1"
+//! ```
+//!
+//! # Examples
+//!
+//! println!("The number is {}.", say_number::say(42));
+//! assert_eq!(say_number::say(2048), "two thousand and forty eight".to_string());
+
 use itertools::Itertools;
 use phf::phf_map;
 
@@ -52,6 +68,14 @@ static BASES: [&str; 7] = [
 static AND: &str = "and";
 static HUNDRED: &str = BASES[0];
 
+/// Says a number in English.
+///
+/// # Examples
+///
+/// ```rust
+/// assert_eq!(say_number::say(416), "four hundred and sixteen".to_string());
+/// assert_eq!(say_number::say(514), "five hundred and fourteen".to_string());
+/// ```
 pub fn say(mut n: u64) -> String {
     if n == 0 {
         return ONES[&0].to_string();
@@ -121,11 +145,6 @@ mod tests {
     #[test]
     fn say_42() {
         assert_eq!(say(42), "forty two".to_string());
-    }
-
-    #[test]
-    fn say_416() {
-        assert_eq!(say(416), "four hundred and sixteen".to_string());
     }
 
     #[test]
