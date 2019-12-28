@@ -1,4 +1,6 @@
 # say-number
+[![crates.io](https://img.shields.io/crates/v/say-number.svg)](https://crates.io/crates/say-number)
+
 Library to say number in English
 
 ## Quickstart
