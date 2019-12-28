@@ -9,3 +9,10 @@ edition = "2018"
 [dependencies]
 itertools = "0.8"
 phf = { version = "0.8", features = ["macros"] }
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "bench"
+harness = false
