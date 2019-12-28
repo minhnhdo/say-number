@@ -3,6 +3,11 @@ name = "say-number"
 version = "0.1.0"
 authors = ["Do Nhat Minh <minhnhdo@gmail.com>"]
 edition = "2018"
+description = "Library to say number"
+keywords = ["say", "number"]
+readme = "README.md"
+license-file = "LICENSE"
+repository = "https://github.com/minhnhdo/say-number"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
