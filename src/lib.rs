@@ -11,8 +11,10 @@
 //!
 //! # Examples
 //!
+//! ```rust
 //! println!("The number is {}.", say_number::say(42));
-//! assert_eq!(say_number::say(2048), "two thousand and forty eight".to_string());
+//! assert_eq!(say_number::say(514), "five hundred and fourteen".to_string());
+//! ```
 
 use itertools::Itertools;
 use phf::phf_map;
