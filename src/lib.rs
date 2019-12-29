@@ -1,8 +1,8 @@
-//! `say-number` says the number in English.
+//! `say-number` says numbers in English.
 //!
-//! # Using this library
+//! # Quickstart
 //!
-//! Add the following to your [`Cargo.toml`](https://crates.io/):
+//! Add the following to your [`Cargo.toml`](https://crates.io/) file.
 //!
 //! ```toml
 //! [dependencies]

@@ -1,11 +1,11 @@
 # say-number
 [![crates.io](https://img.shields.io/crates/v/say-number.svg)](https://crates.io/crates/say-number)
 
-Library to say number in English
+Library to say numbers in English.
 
 ## Quickstart
 
-Add the following to your `Cargo.toml` file.
+Add the following to your [`Cargo.toml`](https://crates.io/) file.
 
 ```toml
 [dependencies]
