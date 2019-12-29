@@ -1,4 +1,4 @@
-use say_number::say;
+use say_number::english::say;
 
 #[test]
 fn say_0() {
