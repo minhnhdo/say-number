@@ -21,6 +21,9 @@ criterion = "0.3"
 [[test]]
 name = "english"
 
+[[test]]
+name = "french"
+
 [[bench]]
 name = "english"
 harness = false

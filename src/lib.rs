@@ -17,6 +17,7 @@
 //! ```
 
 pub mod english;
+pub mod french;
 
 #[inline]
 pub fn say(n: u64) -> String {
