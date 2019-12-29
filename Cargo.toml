@@ -18,8 +18,8 @@ itertools = "0.8"
 criterion = "0.3"
 
 [[test]]
-name = "test"
+name = "english"
 
 [[bench]]
-name = "bench"
+name = "english"
 harness = false
