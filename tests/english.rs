@@ -26,6 +26,14 @@ fn say_42() {
 }
 
 #[test]
+fn say_max_u8() {
+    assert_eq!(
+        say(std::u8::MAX as u64),
+        "two hundred and fifty five".to_string()
+    );
+}
+
+#[test]
 fn say_500() {
     assert_eq!(say(500), "five hundred".to_string());
 }
@@ -59,6 +67,14 @@ fn say_8888() {
 }
 
 #[test]
+fn say_max_u16() {
+    assert_eq!(
+        say(std::u16::MAX as u64),
+        "sixty five thousand five hundred and thirty five".to_string()
+    );
+}
+
+#[test]
 fn say_1_000_000() {
     assert_eq!(say(1_000_000), "one million".to_string());
 }
@@ -66,6 +82,14 @@ fn say_1_000_000() {
 #[test]
 fn say_1_000_000_000() {
     assert_eq!(say(1_000_000_000), "one billion".to_string());
+}
+
+#[test]
+fn say_max_u32() {
+    assert_eq!(
+        say(std::u32::MAX as u64),
+        "four billion two hundred and ninety four million nine hundred and sixty seven thousand two hundred and ninety five".to_string()
+    );
 }
 
 #[test]
