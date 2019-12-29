@@ -17,45 +17,27 @@
 //! ```
 
 use itertools::Itertools;
-use phf::phf_map;
 
-static ONES: phf::Map<u64, &'static str> = phf_map! {
-    0u64 => "zero",
-    1u64 => "one",
-    2u64 => "two",
-    3u64 => "three",
-    4u64 => "four",
-    5u64 => "five",
-    6u64 => "six",
-    7u64 => "seven",
-    8u64 => "eight",
-    9u64 => "nine",
-};
+static ONES: [&str; 10] = [
+    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+];
 
-static TEENS: phf::Map<u64, &'static str> = phf_map! {
-    11u64 => "eleven",
-    12u64 => "twelve",
-    13u64 => "thirteen",
-    14u64 => "fourteen",
-    15u64 => "fifteen",
-    16u64 => "sixteen",
-    17u64 => "seventeen",
-    18u64 => "eighteen",
-    19u64 => "nineteen",
-};
+static TEENS: [&str; 10] = [
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+];
 
-static TENS: phf::Map<u64, &'static str> = phf_map! {
-    0u64 => "",
-    1u64 => "ten",
-    2u64 => "twenty",
-    3u64 => "thirty",
-    4u64 => "forty",
-    5u64 => "fifty",
-    6u64 => "sixty",
-    7u64 => "seventy",
-    8u64 => "eighty",
-    9u64 => "ninety",
-};
+static TENS: [&str; 8] = [
+    "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety",
+];
 
 static BASES: [&str; 7] = [
     "hundred",
@@ -80,7 +62,7 @@ static HUNDRED: &str = BASES[0];
 /// ```
 pub fn say(mut n: u64) -> String {
     if n == 0 {
-        return ONES[&0].to_string();
+        return ONES[0].to_string();
     }
     let mut ret = Vec::new();
     let mut base_index = 0;
@@ -93,16 +75,16 @@ pub fn say(mut n: u64) -> String {
         let tens_and_ones = hundreds_tens_and_ones % 100;
         let hundreds = hundreds_tens_and_ones / 100;
         // special case for the teens
-        if tens_and_ones > 10 && tens_and_ones < 20 {
-            ret.push(TEENS[&tens_and_ones]);
+        if tens_and_ones >= 10 && tens_and_ones < 20 {
+            ret.push(TEENS[tens_and_ones as usize % 10]);
         } else {
             let ones = tens_and_ones % 10;
             let tens = tens_and_ones / 10;
             if ones > 0 {
-                ret.push(ONES[&ones]);
+                ret.push(ONES[ones as usize]);
             }
             if tens > 0 {
-                ret.push(TENS[&tens]);
+                ret.push(TENS[tens as usize - 2]);
             }
         }
         if hundreds > 0 {
@@ -110,7 +92,7 @@ pub fn say(mut n: u64) -> String {
                 ret.push(AND);
             }
             ret.push(HUNDRED);
-            ret.push(ONES[&hundreds]);
+            ret.push(ONES[hundreds as usize]);
         }
         if base_index == 0 && n > 0 && hundreds == 0 && tens_and_ones > 0 {
             ret.push(AND);
@@ -126,22 +108,22 @@ mod tests {
 
     #[test]
     fn say_0() {
-        assert_eq!(say(0), ONES[&0].to_string());
+        assert_eq!(say(0), ONES[0].to_string());
     }
 
     #[test]
     fn say_5() {
-        assert_eq!(say(5), ONES[&5].to_string());
+        assert_eq!(say(5), ONES[5].to_string());
     }
 
     #[test]
     fn say_14() {
-        assert_eq!(say(14), TEENS[&14].to_string());
+        assert_eq!(say(14), TEENS[4].to_string());
     }
 
     #[test]
     fn say_30() {
-        assert_eq!(say(30), TENS[&3].to_string());
+        assert_eq!(say(30), TENS[3 - 2].to_string());
     }
 
     #[test]

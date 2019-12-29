@@ -13,7 +13,6 @@ repository = "https://github.com/minhnhdo/say-number"
 
 [dependencies]
 itertools = "0.8"
-phf = { version = "0.8", features = ["macros"] }
 
 [dev-dependencies]
 criterion = "0.3"
