@@ -39,8 +39,8 @@ static HUNDRED: &str = BASES[0];
 /// # Examples
 ///
 /// ```rust
-/// assert_eq!(say_number::say(416), "four hundred and sixteen".to_string());
-/// assert_eq!(say_number::say(514), "five hundred and fourteen".to_string());
+/// assert_eq!(say_number::english::say(416), "four hundred and sixteen".to_string());
+/// assert_eq!(say_number::english::say(514), "five hundred and fourteen".to_string());
 /// ```
 pub fn say(mut n: u64) -> String {
     if n == 0 {
