@@ -59,6 +59,11 @@ fn say_1000() {
 }
 
 #[test]
+fn say_1001() {
+    assert_eq!(say(1001), "một ngàn không trăm lẻ một".to_string());
+}
+
+#[test]
 fn say_2048() {
     assert_eq!(say(2048), "hai ngàn không trăm bốn mươi tám".to_string());
 }
@@ -82,6 +87,32 @@ fn say_1_000_000() {
 }
 
 #[test]
+fn say_1_000_010() {
+    assert_eq!(say(1_000_010), "một triệu không trăm mười".to_string());
+}
+
+#[test]
+fn say_1_001_000() {
+    assert_eq!(
+        say(1_001_000),
+        "một triệu không trăm lẻ một ngàn".to_string()
+    );
+}
+
+#[test]
+fn say_1_010_000() {
+    assert_eq!(say(1_010_000), "một triệu không trăm mười ngàn".to_string());
+}
+
+#[test]
+fn say_1_100_010() {
+    assert_eq!(
+        say(1_100_010),
+        "một triệu một trăm ngàn không trăm mười".to_string()
+    );
+}
+
+#[test]
 fn say_1_000_000_000() {
     assert_eq!(say(1_000_000_000), "một tỷ".to_string());
 }
@@ -98,6 +129,14 @@ fn say_max_u32() {
 #[test]
 fn say_1_000_000_000_000() {
     assert_eq!(say(1_000_000_000_000), "một ngàn tỷ".to_string());
+}
+
+#[test]
+fn say_1_000_010_000_000() {
+    assert_eq!(
+        say(1_000_010_000_000),
+        "một ngàn tỷ không trăm mười triệu".to_string()
+    );
 }
 
 #[test]

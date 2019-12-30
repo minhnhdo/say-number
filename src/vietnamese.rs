@@ -33,14 +33,14 @@ pub fn say(mut n: u64) -> String {
         if m > 0 {
             (0..nbillion).for_each(|_| ret.push(TY));
         }
-        say_number_less_than_a_billion(m, &mut ret);
+        say_number_less_than_a_billion(m, &mut ret, n > 0);
         nbillion += 1;
     }
     ret.iter().rev().map(|s| *s).intersperse(" ").collect()
 }
 
 #[inline]
-fn say_number_less_than_a_billion(mut n: u64, ret: &mut Vec<&str>) {
+fn say_number_less_than_a_billion(mut n: u64, ret: &mut Vec<&str>, more: bool) {
     let mut base_index = 0;
     while n > 0 {
         let hundreds_tens_and_ones = n % 1000;
@@ -54,7 +54,7 @@ fn say_number_less_than_a_billion(mut n: u64, ret: &mut Vec<&str>) {
             // do nothing
         } else if tens_and_ones < 10 {
             ret.push(ZERO_TO_TEN[tens_and_ones as usize]);
-            if hundreds > 0 {
+            if more || n > 0 || hundreds > 0 {
                 ret.push(LE);
             }
         } else {
@@ -78,7 +78,7 @@ fn say_number_less_than_a_billion(mut n: u64, ret: &mut Vec<&str>) {
             }
         }
         if hundreds == 0 {
-            if n > 0 && tens_and_ones > 0 {
+            if (more || n > 0) && tens_and_ones > 0 {
                 ret.push(TRAM);
                 ret.push(ZERO_TO_TEN[0]);
             }
