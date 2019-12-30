@@ -131,5 +131,5 @@ pub fn say(mut n: u64) -> String {
         }
         base_index += 1;
     }
-    ret.iter().rev().intersperse(&" ").map(|s| *s).collect::<String>().replace(" - ", "-")
+    ret.iter().rev().map(|s| *s).intersperse(" ").collect::<String>().replace(" - ", "-")
 }
