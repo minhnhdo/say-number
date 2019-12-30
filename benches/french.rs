@@ -14,7 +14,9 @@ fn say_514(c: &mut Criterion) {
 }
 
 fn say_max_u64(c: &mut Criterion) {
-    c.bench_function("say max u64 in French", |b| b.iter(|| say(black_box(std::u64::MAX))));
+    c.bench_function("say max u64 in French", |b| {
+        b.iter(|| say(black_box(std::u64::MAX)))
+    });
 }
 
 criterion_group!(french, say_max_u64, say_514, say_42, say_0);

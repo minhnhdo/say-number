@@ -5,29 +5,23 @@ static ONES: [&str; 10] = [
 ];
 
 static TEENS: [&str; 10] = [
-    "dix",
-    "onze",
-    "douze",
-    "treize",
-    "quatorze",
-    "quinze",
-    "seize",
-    "dix-sept",
-    "dix-huit",
+    "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize", "dix-sept", "dix-huit",
     "dix-neuf",
 ];
 
 static TENS: [&str; 8] = [
-    "vingt", "trente", "quarante", "cinquante", "soixante", "soixante-dix", "quatre-vingt", "quatre-vingt-dix",
+    "vingt",
+    "trente",
+    "quarante",
+    "cinquante",
+    "soixante",
+    "soixante-dix",
+    "quatre-vingt",
+    "quatre-vingt-dix",
 ];
 
 static BASES: [&str; 6] = [
-    "mille",
-    "million",
-    "milliard",
-    "billion",
-    "billiard",
-    "trillion",
+    "mille", "million", "milliard", "billion", "billiard", "trillion",
 ];
 
 static BASES_PLURAL: [&str; 6] = [
@@ -132,5 +126,10 @@ pub fn say(mut n: u64) -> String {
         }
         base_index += 1;
     }
-    ret.iter().rev().map(|s| *s).intersperse(" ").collect::<String>().replace(" - ", "-")
+    ret.iter()
+        .rev()
+        .map(|s| *s)
+        .intersperse(" ")
+        .collect::<String>()
+        .replace(" - ", "-")
 }
