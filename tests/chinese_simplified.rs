@@ -27,10 +27,7 @@ fn say_42() {
 
 #[test]
 fn say_max_u8() {
-    assert_eq!(
-        say(std::u8::MAX as u64),
-        "两百五十五".to_string()
-    );
+    assert_eq!(say(std::u8::MAX as u64), "两百五十五".to_string());
 }
 
 #[test]
@@ -64,21 +61,18 @@ fn say_2048() {
 }
 
 #[test]
-fn say_8888() { assert_eq!(say(8888), "八千八百八十八".to_string()
-    );
+fn say_8888() {
+    assert_eq!(say(8888), "八千八百八十八".to_string());
 }
 
 #[test]
-fn say_10_101() { assert_eq!(say(10_101), "一万零一百零一".to_string()
-);
+fn say_10_101() {
+    assert_eq!(say(10_101), "一万零一百零一".to_string());
 }
 
 #[test]
 fn say_max_u16() {
-    assert_eq!(
-        say(std::u16::MAX as u64),
-        "六万五千五百三十五".to_string()
-    );
+    assert_eq!(say(std::u16::MAX as u64), "六万五千五百三十五".to_string());
 }
 
 #[test]
@@ -102,7 +96,9 @@ fn say_1_010_000() {
 }
 
 #[test]
-fn say_1_100_010() { assert_eq!(say(1_100_010), "一百一十万零一十".to_string()); }
+fn say_1_100_010() {
+    assert_eq!(say(1_100_010), "一百一十万零一十".to_string());
+}
 
 #[test]
 fn say_10_050_026() {
@@ -133,7 +129,9 @@ fn say_1_000_000_000_000() {
 }
 
 #[test]
-fn say_1_000_010_000_000() { assert_eq!(say(1_000_010_000_000), "一兆零一千万".to_string()); }
+fn say_1_000_010_000_000() {
+    assert_eq!(say(1_000_010_000_000), "一兆零一千万".to_string());
+}
 
 #[test]
 fn say_20_200_200_200_022() {
@@ -150,10 +148,7 @@ fn say_1_000_000_000_000_000() {
 
 #[test]
 fn say_1_000_000_000_000_000_000() {
-    assert_eq!(
-        say(1_000_000_000_000_000_000),
-        "一百京".to_string()
-    );
+    assert_eq!(say(1_000_000_000_000_000_000), "一百京".to_string());
 }
 
 #[test]

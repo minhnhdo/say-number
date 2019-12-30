@@ -1,18 +1,11 @@
-static ONES: [&str; 10] = [
-    "零", "一", "二", "三", "四", "五", "六", "七", "八", "九",
-];
+static ONES: [&str; 10] = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
 
 static TWO: &str = "两";
 static TEN: &str = "十";
 static HUNDRED: &str = "百";
 static THOUSAND: &str = "千";
 
-static BASES: [&str; 4] = [
-    "万",
-    "亿",
-    "兆",
-    "京",
-];
+static BASES: [&str; 4] = ["万", "亿", "兆", "京"];
 
 /// Says a number in Chinese (Simplified).
 ///
@@ -54,7 +47,11 @@ pub fn say(mut n: u64) -> String {
             }
             if tens > 0 {
                 ret.push(TEN);
-                if !(tens == 1 && thousands_hundreds_tens_and_ones < 20 && base_index == 0 && n == 0) {
+                if !(tens == 1
+                    && thousands_hundreds_tens_and_ones < 20
+                    && base_index == 0
+                    && n == 0)
+                {
                     ret.push(ONES[tens as usize]);
                 }
             } else if (thousands_hundreds_tens_and_ones > 99 || n > 0) && ones > 0 {
