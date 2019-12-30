@@ -1,4 +1,4 @@
-//! `say-number` says numbers in English and French.
+//! `say-number` says numbers in English, French and Vietnamese.
 //!
 //! # Quickstart
 //!
@@ -18,6 +18,7 @@
 
 pub mod english;
 pub mod french;
+pub mod vietnamese;
 
 /// Says a number in English. **Attention**: in future releases, this function will automatically
 /// select the language to use based on the user's setting on his/her machine.

@@ -3,8 +3,8 @@ name = "say-number"
 version = "0.1.2"
 authors = ["Do Nhat Minh <minhnhdo@gmail.com>", "Katie Tran <thytrannk@gmail.com>"]
 edition = "2018"
-description = "Library to say numbers in English and French"
-keywords = ["say", "number", "english", "french", "francais", "français"]
+description = "Library to say numbers in English, French and Vietnamese"
+keywords = ["say", "number", "english", "french", "francais", "français", "vietnamese", "tieng viet", "tiếng việt"]
 categories = ["internationalization", "localization", "value-formatting"]
 readme = "README.md"
 license = "MIT"
@@ -24,10 +24,17 @@ name = "english"
 [[test]]
 name = "french"
 
+[[test]]
+name = "vietnamese"
+
 [[bench]]
 name = "english"
 harness = false
 
 [[bench]]
 name = "french"
+harness = false
+
+[[bench]]
+name = "vietnamese"
 harness = false
