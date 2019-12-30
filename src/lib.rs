@@ -1,4 +1,4 @@
-//! `say-number` says numbers in English, French and Vietnamese.
+//! `say-number` says numbers in English, Chinese (simplified), French and Vietnamese.
 //!
 //! # Quickstart
 //!
@@ -14,14 +14,15 @@
 //! ```rust
 //! println!("The number is {}.", say_number::say(42));
 //! assert_eq!(say_number::say(514), "five hundred and fourteen".to_string());
-//!  assert_eq!(say_number::english::say(514), "five hundred and fourteen".to_string());
+//! assert_eq!(say_number::english::say(514), "five hundred and fourteen".to_string());
+//! assert_eq!(say_number::chinese_simplified::say(514), "五百一十四".to_string());
 //! assert_eq!(say_number::french::say(514), "cinq-cent-quatorze".to_string());
 //! assert_eq!(say_number::vietnamese::say(514), "năm trăm mười bốn".to_string());
 //! ```
 
+pub mod chinese_simplified;
 pub mod english;
 pub mod french;
-pub mod chinese_simplified;
 pub mod vietnamese;
 
 /// Says a number in English. **Attention**: in future releases, this function will automatically
