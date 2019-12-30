@@ -28,6 +28,7 @@ pub fn say(mut n: u64) -> String {
     }
     let mut ret = Vec::new();
     let mut base_index = 0;
+    let mut ling = true; // whether the previous group of digits end with "ling"
     while n > 0 {
         let thousands_hundreds_tens_and_ones = n % 10000;
         n /= 10000;
@@ -45,7 +46,11 @@ pub fn say(mut n: u64) -> String {
 
         if thousands_hundreds_tens_and_ones > 0 {
             if ones > 0 {
-                ret.push(ONES[ones as usize]);
+                if thousands_hundreds_tens_and_ones == 2 {
+                    ret.push(TWO);
+                } else {
+                    ret.push(ONES[ones as usize]);
+                }
             }
             if tens > 0 {
                 ret.push(TEN);
@@ -82,6 +87,13 @@ pub fn say(mut n: u64) -> String {
                 // number in the form of ...0abc
                 ret.push(ONES[0]);
             }
+        } else if ling == false {
+            ret.push(ONES[0]);
+        }
+        if thousands_hundreds_tens_and_ones < 1000 {
+            ling = true;
+        } else {
+            ling = false;
         }
         base_index += 1;
     }

@@ -54,6 +54,11 @@ fn say_1000() {
 }
 
 #[test]
+fn say_1001() {
+    assert_eq!(say(1001), "一千零一".to_string());
+}
+
+#[test]
 fn say_2048() {
     assert_eq!(say(2048), "两千零四十八".to_string());
 }
@@ -64,7 +69,7 @@ fn say_8888() { assert_eq!(say(8888), "八千八百八十八".to_string()
 }
 
 #[test]
-fn say_10101() { assert_eq!(say(10101), "一万零一百零一".to_string()
+fn say_10_101() { assert_eq!(say(10_101), "一万零一百零一".to_string()
 );
 }
 
@@ -82,6 +87,24 @@ fn say_1_000_000() {
 }
 
 #[test]
+fn say_1_000_010() {
+    assert_eq!(say(1_000_010), "一百万零一十".to_string());
+}
+
+#[test]
+fn say_1_001_000() {
+    assert_eq!(say(1_001_000), "一百万一千".to_string());
+}
+
+#[test]
+fn say_1_010_000() {
+    assert_eq!(say(1_010_000), "一百零一万".to_string());
+}
+
+#[test]
+fn say_1_100_010() { assert_eq!(say(1_100_010), "一百一十万零一十".to_string()); }
+
+#[test]
 fn say_10_050_026() {
     assert_eq!(say(10_050_026), "一千零五万零二十六".to_string());
 }
@@ -89,6 +112,11 @@ fn say_10_050_026() {
 #[test]
 fn say_1_000_000_000() {
     assert_eq!(say(1_000_000_000), "一十亿".to_string());
+}
+
+#[test]
+fn say_1_000_000_010() {
+    assert_eq!(say(1_000_000_010), "一十亿零一十".to_string());
 }
 
 #[test]
@@ -102,6 +130,17 @@ fn say_max_u32() {
 #[test]
 fn say_1_000_000_000_000() {
     assert_eq!(say(1_000_000_000_000), "一兆".to_string());
+}
+
+#[test]
+fn say_1_000_010_000_000() { assert_eq!(say(1_000_010_000_000), "一兆零一千万".to_string()); }
+
+#[test]
+fn say_20_200_200_200_022() {
+    assert_eq!(
+        say(20_200_200_200_022),
+        "二十兆两千零二亿零二十万零二十二".to_string()
+    );
 }
 
 #[test]
