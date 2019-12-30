@@ -70,10 +70,10 @@ pub fn say(mut n: u64) -> String {
                 ret.push(DASH);
             }
             if hundreds_tens_and_ones == 1 {
-                // the word MILLE
+                // mille, million, milliard, ...
                 ret.push(BASES[base_index - 1]);
             } else {
-                // the word MILLION, MILLIARD, ...
+                // mille, millions, milliards, ...
                 ret.push(BASES_MULT[base_index - 1]);
             }
         }
