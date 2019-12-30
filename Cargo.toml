@@ -24,6 +24,9 @@ name = "english"
 [[test]]
 name = "french"
 
+[[test]]
+name = "chinese_simplified"
+
 [[bench]]
 name = "english"
 harness = false
