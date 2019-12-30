@@ -46,6 +46,10 @@ static QUATRE_VINGTS: &str = "quatre-vingts";
 
 /// Says a number in French.
 ///
+/// The rules for saying numbers is from https://fr.wikipedia.org/wiki/Nombres_en_français and
+/// follows the 1990 orthography. If you find any deviations from those rules, please file a bug
+/// report.
+///
 /// # Examples
 ///
 /// ```rust
