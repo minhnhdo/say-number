@@ -25,6 +25,9 @@ name = "english"
 name = "french"
 
 [[test]]
+name = "chinese_simplified"
+
+[[test]]
 name = "vietnamese"
 
 [[bench]]

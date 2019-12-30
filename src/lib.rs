@@ -21,6 +21,7 @@
 
 pub mod english;
 pub mod french;
+pub mod chinese_simplified;
 pub mod vietnamese;
 
 /// Says a number in English. **Attention**: in future releases, this function will automatically
