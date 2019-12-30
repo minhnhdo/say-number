@@ -27,3 +27,7 @@ name = "french"
 [[bench]]
 name = "english"
 harness = false
+
+[[bench]]
+name = "french"
+harness = false
