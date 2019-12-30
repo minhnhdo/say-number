@@ -22,16 +22,20 @@ criterion = "0.3"
 name = "english"
 
 [[test]]
-name = "french"
+name = "chinese_simplified"
 
 [[test]]
-name = "chinese_simplified"
+name = "french"
 
 [[test]]
 name = "vietnamese"
 
 [[bench]]
 name = "english"
+harness = false
+
+[[bench]]
+name = "chinese_simplified"
 harness = false
 
 [[bench]]
