@@ -1,7 +1,7 @@
 [package]
 name = "say-number"
-version = "0.1.1"
-authors = ["Do Nhat Minh <minhnhdo@gmail.com>"]
+version = "0.1.2"
+authors = ["Do Nhat Minh <minhnhdo@gmail.com>", "Katie Tran <thytrannk@gmail.com>"]
 edition = "2018"
 description = "Library to say numbers in English"
 keywords = ["say", "number", "english"]
