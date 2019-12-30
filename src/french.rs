@@ -1,5 +1,3 @@
-use itertools::Itertools;
-
 static ONES: [&str; 10] = [
     "zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf",
 ];
@@ -126,10 +124,17 @@ pub fn say(mut n: u64) -> String {
         }
         base_index += 1;
     }
-    ret.iter()
-        .rev()
-        .map(|s| *s)
-        .intersperse(" ")
-        .collect::<String>()
-        .replace(" - ", "-")
+    let mut result = String::new();
+    let mut first = true;
+    let mut dash = false;
+    for s in ret.iter().rev() {
+        if first {
+            first = false;
+        } else if !dash && s != &DASH {
+            result.push_str(" ");
+        }
+        result.push_str(s);
+        dash = s == &DASH;
+    }
+    result
 }
