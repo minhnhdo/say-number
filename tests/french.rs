@@ -51,16 +51,24 @@ fn say_91() {
 }
 
 #[test]
-fn say_100() { assert_eq!(say(100), "cent".to_string()); }
+fn say_100() {
+    assert_eq!(say(100), "cent".to_string());
+}
 
 #[test]
-fn say_101() { assert_eq!(say(101), "cent-un".to_string()); }
+fn say_101() {
+    assert_eq!(say(101), "cent-un".to_string());
+}
 
 #[test]
-fn say_180() { assert_eq!(say(180), "cent-quatre-vingts".to_string()); }
+fn say_180() {
+    assert_eq!(say(180), "cent-quatre-vingts".to_string());
+}
 
 #[test]
-fn say_183() { assert_eq!(say(183), "cent-quatre-vingt-trois".to_string()); }
+fn say_183() {
+    assert_eq!(say(183), "cent-quatre-vingt-trois".to_string());
+}
 
 #[test]
 fn say_201() {
@@ -121,10 +129,14 @@ fn say_3000() {
 }
 
 #[test]
-fn say_3033() { assert_eq!(say(3033), "trois-mille-trente-trois".to_string()); }
+fn say_3033() {
+    assert_eq!(say(3033), "trois-mille-trente-trois".to_string());
+}
 
 #[test]
-fn say_3300() { assert_eq!(say(3300), "trois-mille-trois-cents".to_string()); }
+fn say_3300() {
+    assert_eq!(say(3300), "trois-mille-trois-cents".to_string());
+}
 
 #[test]
 fn say_8888() {
@@ -143,25 +155,42 @@ fn say_max_u16() {
 }
 
 #[test]
-fn say_80_000() { assert_eq!(say(80_000), "quatre-vingt-mille".to_string()); }
+fn say_80_000() {
+    assert_eq!(say(80_000), "quatre-vingt-mille".to_string());
+}
 
 #[test]
-fn say_300_000() { assert_eq!(say(300_000), "trois-cent-mille".to_string()); }
+fn say_300_000() {
+    assert_eq!(say(300_000), "trois-cent-mille".to_string());
+}
 
 #[test]
-fn say_311_000() { assert_eq!(say(311_000), "trois-cent-onze-mille".to_string()); }
+fn say_311_000() {
+    assert_eq!(say(311_000), "trois-cent-onze-mille".to_string());
+}
 
 #[test]
-fn say_1_000_000() { assert_eq!(say(1_000_000), "un million".to_string()); }
+fn say_1_000_000() {
+    assert_eq!(say(1_000_000), "un million".to_string());
+}
 
 #[test]
-fn say_80_000_000() { assert_eq!(say(80_000_000), "quatre-vingts millions".to_string()); }
+fn say_80_000_000() {
+    assert_eq!(say(80_000_000), "quatre-vingts millions".to_string());
+}
 
 #[test]
-fn say_100_100_400() { assert_eq!(say(100_100_400), "cent millions cent-mille-quatre-cents".to_string()); }
+fn say_100_100_400() {
+    assert_eq!(
+        say(100_100_400),
+        "cent millions cent-mille-quatre-cents".to_string()
+    );
+}
 
 #[test]
-fn say_300_000_000() { assert_eq!(say(300_000_000), "trois-cents millions".to_string()); }
+fn say_300_000_000() {
+    assert_eq!(say(300_000_000), "trois-cents millions".to_string());
+}
 
 #[test]
 fn say_1_000_000_000() {
@@ -184,7 +213,9 @@ fn say_max_u32() {
 }
 
 #[test]
-fn say_1_000_000_000_000() { assert_eq!(say(1_000_000_000_000), "un billion".to_string()); }
+fn say_1_000_000_000_000() {
+    assert_eq!(say(1_000_000_000_000), "un billion".to_string());
+}
 
 #[test]
 fn say_1_000_000_000_000_000() {
@@ -193,10 +224,7 @@ fn say_1_000_000_000_000_000() {
 
 #[test]
 fn say_1_000_000_000_000_000_000() {
-    assert_eq!(
-        say(1_000_000_000_000_000_000),
-        "un trillion".to_string()
-    );
+    assert_eq!(say(1_000_000_000_000_000_000), "un trillion".to_string());
 }
 
 #[test]

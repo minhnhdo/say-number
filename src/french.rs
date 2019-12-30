@@ -5,29 +5,23 @@ static ONES: [&str; 10] = [
 ];
 
 static TEENS: [&str; 10] = [
-    "dix",
-    "onze",
-    "douze",
-    "treize",
-    "quatorze",
-    "quinze",
-    "seize",
-    "dix-sept",
-    "dix-huit",
+    "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize", "dix-sept", "dix-huit",
     "dix-neuf",
 ];
 
 static TENS: [&str; 8] = [
-    "vingt", "trente", "quarante", "cinquante", "soixante", "soixante-dix", "quatre-vingt", "quatre-vingt-dix",
+    "vingt",
+    "trente",
+    "quarante",
+    "cinquante",
+    "soixante",
+    "soixante-dix",
+    "quatre-vingt",
+    "quatre-vingt-dix",
 ];
 
 static BASES: [&str; 6] = [
-    "mille",
-    "million",
-    "milliard",
-    "billion",
-    "billiard",
-    "trillion",
+    "mille", "million", "milliard", "billion", "billiard", "trillion",
 ];
 
 static BASES_PLURAL: [&str; 6] = [
@@ -46,9 +40,10 @@ static QUATRE_VINGTS: &str = "quatre-vingts";
 
 /// Says a number in French.
 ///
-/// The rules for saying numbers is from https://fr.wikipedia.org/wiki/Nombres_en_français and
-/// follows the 1990 orthography. If you find any deviations from those rules, please file a bug
-/// report.
+/// The rules for saying numbers are from
+/// [Wikipedia](https://fr.wikipedia.org/wiki/Nombres_en_français) and follow the 1990 orthography.
+/// If you find any deviations from those rules, please file
+/// [a bug report](https://github.com/minhnhdo/say-number/issues/new).
 ///
 /// # Examples
 ///
@@ -131,5 +126,10 @@ pub fn say(mut n: u64) -> String {
         }
         base_index += 1;
     }
-    ret.iter().rev().map(|s| *s).intersperse(" ").collect::<String>().replace(" - ", "-")
+    ret.iter()
+        .rev()
+        .map(|s| *s)
+        .intersperse(" ")
+        .collect::<String>()
+        .replace(" - ", "-")
 }

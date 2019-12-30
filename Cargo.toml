@@ -1,11 +1,11 @@
 [package]
 name = "say-number"
-version = "0.1.2"
+version = "0.1.4"
 authors = ["Do Nhat Minh <minhnhdo@gmail.com>", "Katie Tran <thytrannk@gmail.com>"]
 edition = "2018"
-description = "Library to say numbers in English"
-keywords = ["say", "number", "english"]
-categories = ["natural-language"]
+description = "Library to say numbers in English, French and Vietnamese"
+keywords = ["say", "number", "english", "french", "vietnamese"]
+categories = ["internationalization", "localization", "value-formatting"]
 readme = "README.md"
 license = "MIT"
 repository = "https://github.com/minhnhdo/say-number"
@@ -27,10 +27,17 @@ name = "french"
 [[test]]
 name = "chinese_simplified"
 
+[[test]]
+name = "vietnamese"
+
 [[bench]]
 name = "english"
 harness = false
 
 [[bench]]
 name = "french"
+harness = false
+
+[[bench]]
+name = "vietnamese"
 harness = false
