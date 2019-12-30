@@ -17,6 +17,7 @@
 //! ```
 
 pub mod english;
+pub mod french;
 
 /// Says a number in English. **Attention**: in future releases, this function will automatically
 /// select the language to use based on the user's setting on his/her machine.
