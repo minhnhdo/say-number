@@ -30,7 +30,7 @@ static BASES: [&str; 6] = [
     "trillion",
 ];
 
-static BASES_MULT: [&str; 6] = [
+static BASES_PLURAL: [&str; 6] = [
     "mille",
     "millions",
     "milliards",
@@ -70,11 +70,11 @@ pub fn say(mut n: u64) -> String {
                 ret.push(DASH);
             }
             if hundreds_tens_and_ones == 1 {
-                // mille, million, milliard, ...
+                // single base (mille, million, milliard, ...)
                 ret.push(BASES[base_index - 1]);
             } else {
-                // mille, millions, milliards, ...
-                ret.push(BASES_MULT[base_index - 1]);
+                // plural base (mille, millions, milliards, ...)
+                ret.push(BASES_PLURAL[base_index - 1]);
             }
         }
         let tens_and_ones = hundreds_tens_and_ones % 100;
