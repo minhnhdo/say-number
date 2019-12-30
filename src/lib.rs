@@ -1,4 +1,4 @@
-//! `say-number` says numbers in English.
+//! `say-number` says numbers in English and French.
 //!
 //! # Quickstart
 //!
