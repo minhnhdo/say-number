@@ -10,6 +10,9 @@ readme = "README.md"
 license = "MIT"
 repository = "https://github.com/minhnhdo/say-number"
 
+[badges]
+travis-ci = { repository = "minhnhdo/say-number", branch = "master" }
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
