@@ -121,6 +121,11 @@ fn say_1_000_000_010() {
 }
 
 #[test]
+fn say_1_001_000_000() {
+    assert_eq!(say(1_001_000_000), "十億百万".to_string());
+}
+
+#[test]
 fn say_max_u32() {
     assert_eq!(
         say(std::u32::MAX as u64),
