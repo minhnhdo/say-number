@@ -1,9 +1,9 @@
 [package]
 name = "say-number"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Do Nhat Minh <minhnhdo@gmail.com>", "Katie Tran <thytrannk@gmail.com>"]
 edition = "2018"
-description = "Library to say numbers in English, Chinese (simplified), French and Vietnamese"
+description = "Library to say numbers in English, Chinese (simplified), French, Japanese and Vietnamese"
 keywords = ["number", "internationalization", "localization", "i18n", "l10n"]
 categories = ["internationalization", "localization", "value-formatting"]
 readme = "README.md"
@@ -31,6 +31,9 @@ name = "chinese_simplified"
 name = "french"
 
 [[test]]
+name = "japanese"
+
+[[test]]
 name = "vietnamese"
 
 [[bench]]
@@ -43,6 +46,10 @@ harness = false
 
 [[bench]]
 name = "french"
+harness = false
+
+[[bench]]
+name = "japanese"
 harness = false
 
 [[bench]]

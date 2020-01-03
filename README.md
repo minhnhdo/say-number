@@ -1,7 +1,7 @@
 # say-number
 [![crates.io](https://img.shields.io/crates/v/say-number.svg)](https://crates.io/crates/say-number) [![Build Status](https://travis-ci.org/minhnhdo/say-number.svg?branch=master)](https://travis-ci.org/minhnhdo/say-number)
 
-Library to say numbers in English, Chinese (simplified), French and Vietnamese.
+Library to say numbers in English, Chinese (simplified), French, Japanese and Vietnamese.
 
 ## Quickstart
 
