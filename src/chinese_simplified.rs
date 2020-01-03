@@ -87,11 +87,7 @@ pub fn say(mut n: u64) -> String {
         } else if ling == false {
             ret.push(ONES[0]);
         }
-        if thousands_hundreds_tens_and_ones < 1000 {
-            ling = true;
-        } else {
-            ling = false;
-        }
+        ling = thousands_hundreds_tens_and_ones < 1000;
         base_index += 1;
     }
     ret.iter().rev().map(|s| *s).collect()
