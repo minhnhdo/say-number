@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["say","Says a number in English. Attention: in future releases, this function will automatically select the language to use based on the user's setting on his/her machine."]],"mod":[["chinese_simplified",""],["english",""],["french",""],["japanese",""],["vietnamese",""]]});
