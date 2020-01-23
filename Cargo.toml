@@ -1,6 +1,6 @@
 [package]
 name = "say-number"
-version = "0.1.6"
+version = "1.0.0"
 authors = ["Do Nhat Minh <minhnhdo@gmail.com>", "Katie Tran <thytrannk@gmail.com>"]
 edition = "2018"
 description = "Library to say numbers in English, Chinese (simplified), French, Japanese and Vietnamese"
