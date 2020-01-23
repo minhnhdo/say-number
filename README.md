@@ -9,7 +9,7 @@ Add the following to your [`Cargo.toml`](https://crates.io/) file.
 
 ```toml
 [dependencies]
-say-number = "0.1"
+say-number = "1.0.0"
 ```
 
 ## Examples
